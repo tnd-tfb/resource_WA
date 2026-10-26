@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: YOUR-GITHUB-USERNAME/YOUR-REPO-NAME   # <- change this one line
+  repo: tnd-tfb/resource_WA  # <- change this one line
   branch: main
 
 media_folder: "uploads"
