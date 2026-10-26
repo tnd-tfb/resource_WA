@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student Curriculum</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400&family=Montserrat:wght@600;700&family=Noto+Sans+Bengali:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <nav aria-label="Main"><a href="index.html" aria-current="page">Curriculum</a><a href="resources.html">Resources</a></nav>
+    <img class="logo" src="logo.png" alt="Teach For Bangladesh" onerror="this.remove()">
+  </div>
+  <h1 id="title">Student Curriculum</h1>
+  <div class="bar" id="grades" role="group" aria-label="Grade"></div>
+  <div class="bar" id="batches" role="group" aria-label="Batch"></div>
+  <p class="legend" id="legend"></p>
+  <div class="cols" id="cols" aria-live="polite"></div>
+</div>
+<script>
+const $ = id => document.getElementById(id);
+const el = (t, c, x) => { const e = document.createElement(t); if (c) e.className = c; if (x) e.textContent = x; return e; };
+let data, links = {}, gi = 0, bi = 0;
+
+Promise.all([fetch("data.json").then(r => r.json()), fetch("resources.json").then(r => r.json()).catch(() => ({}))])
+  .then(([d, res]) => {
+    data = d; document.title = $("title").textContent = d.title;
+    (res.reading || []).forEach(r => { if (r.file && r.url) links[r.file] = r.url; });
+    const h = location.hash.match(/g(\d+)b(\d+)/); if (h) { gi = Math.min(+h[1], d.grades.length - 1); bi = +h[2]; }
+    render();
+  })
+  .catch(e => $("cols").replaceChildren(el("div", "err", "Could not load the curriculum files. Check that data.json is valid JSON (" + e.message + ").")));
+
+function pills(box, items, cur, pick) {
+  box.replaceChildren(...items.map((t, i) => { const b = el("button", "", t); b.setAttribute("aria-pressed", i === cur); b.onclick = () => pick(i); return b; }));
+}
+
+function render() {
+  const g = data.grades[gi], nb = Math.max(...g.subjects.map(s => s.batches.length)); bi = Math.min(bi, nb - 1);
+  history.replaceState(null, "", "#g" + gi + "b" + bi);
+  pills($("grades"), data.grades.map(x => x.name), gi, i => { gi = i; render(); });
+  pills($("batches"), Array.from({ length: nb }, (_, i) => "Batch " + (i + 1)), bi, i => { bi = i; render(); });
+  const hasType = g.subjects.some(s => s.batches.some(b => b.lessons.some(l => l.type)));
+  $("legend").textContent = hasType ? "Maths lesson types — Foundational: concrete materials to explore the concept. Intermediate: starts concrete, focuses on pictorial. Authentic: starts concrete/pictorial, focuses on abstract to reach the solution." : "";
+  $("cols").replaceChildren(...g.subjects.map(s => {
+    const sec = el("section"); sec.append(el("h2", "", s.name));
+    const b = s.batches[bi]; if (!b) return sec;
+    const ol = el("ol"); b.lessons.forEach((l, i) => ol.append(lesson(bi * 4 + i + 1, l)));
+    const rv = el("li", "review"); rv.append(el("span", "n", bi * 4 + b.lessons.length + 1), el("span", "", "SWBAT " + (b.review || data.reviewText)));
+    ol.append(rv); sec.append(ol); return sec;
+  }));
+}
+
+function lesson(n, l) {
+  const li = el("li"); li.append(el("span", "n", n), el("span", "obj", l.objective));
+  const meta = el("div", "meta"), parts = [];
+  if (l.type) meta.append(el("span", "tag", l.type));
+  if (l.resource) { if (links[l.resource]) { const a = el("a", "", l.resource); a.href = links[l.resource]; a.target = "_blank"; a.rel = "noopener"; parts.push(a); } else parts.push(l.resource); }
+  if (l.chapter) parts.push(l.chapter);
+  if (l.page) parts.push("p. " + l.page);
+  parts.forEach((p, i) => { if (i) meta.append(" · "); meta.append(p); });
+  if (meta.childNodes.length) li.append(meta);
+  return li;
+}
+</script>
+</body>
+</html>

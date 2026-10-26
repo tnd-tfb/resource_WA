@@ -1,0 +1,43 @@
+backend:
+  name: github
+  repo: YOUR-GITHUB-USERNAME/YOUR-REPO-NAME   # <- change this one line
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+locale: en
+
+collections:
+  - name: resources
+    label: Resources
+    files:
+      - name: resources
+        label: Resource links
+        file: resources.json
+        fields:
+          - label: NCTB books (by grade)
+            name: books
+            widget: list
+            summary: "{{fields.grade}} · {{fields.subject}}"
+            fields:
+              - { label: Grade, name: grade, widget: select, options: [Grade 3, Grade 4, Grade 5, Grade 6, Grade 7, Grade 8] }
+              - { label: Subject, name: subject, widget: select, options: [Bangla, English, Maths, Other] }
+              - { label: Link, name: url, widget: string, required: false, hint: "Paste the full link (https://...). Leave blank to show 'coming soon'." }
+          - label: Reading resources
+            name: reading
+            widget: list
+            summary: "{{fields.language}} · {{fields.title}}"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Language, name: language, widget: select, options: [Bangla, English] }
+              - { label: Grade, name: grade, widget: string, hint: "e.g. Grade 3, or All grades" }
+              - { label: Link, name: url, widget: string, required: false }
+              - { label: File name in curriculum, name: file, widget: string, required: false, hint: "Optional. Exact file name as written in the lesson plan (e.g. Rain, Rain_বাংলা_.pdf). Lessons that use it will link here automatically." }
+          - label: Curriculum
+            name: curriculum
+            widget: list
+            summary: "{{fields.level}} · {{fields.title}}"
+            fields:
+              - { label: Level, name: level, widget: string, hint: "e.g. Primary (Grades 3–5)" }
+              - { label: Title, name: title, widget: string, hint: "e.g. Primary curriculum, or Bangla curriculum" }
+              - { label: Link, name: url, widget: string, required: false }

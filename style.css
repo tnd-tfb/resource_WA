@@ -1,0 +1,39 @@
+/* TFB brand: Out of the Woods #005B3F, Delicate #D5E0D5, Gold Rush #D0A023, Bad Blood #D65641, Reputation #252625, white background */
+:root{--green:#005B3F;--delicate:#D5E0D5;--gold:#D0A023;--red:#D65641;--ink:#252625;--exile:#919191}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--ink);font:16px/1.6 "Helvetica Neue",Helvetica,Arial,"Baloo Da 2",sans-serif}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:16px}
+nav{display:flex;gap:24px}
+nav a{color:var(--green);font:600 1rem "Proxima Nova",Montserrat,"Noto Sans Bengali",sans-serif;text-decoration:none;padding:6px 0;border-bottom:3px solid transparent}
+nav a:hover,nav a:focus-visible{color:var(--gold);border-color:var(--gold);outline:none}
+nav a[aria-current]{border-color:var(--green)}
+nav a[aria-current]:hover{border-color:var(--gold)}
+.logo{height:48px;width:auto}
+h1,h2,h3{font-family:"Proxima Nova",Montserrat,"Noto Sans Bengali",sans-serif;color:var(--green)}
+h1{text-align:center;font-weight:700;font-size:2rem;line-height:1.2;margin:28px 0 8px}
+.sub{text-align:center;margin:0 auto 24px;max-width:60ch}
+h2{font-weight:700;font-size:1.3rem;margin:0 0 12px;padding-bottom:8px;border-bottom:3px solid var(--gold)}
+h3{font-size:1.05rem;margin:18px 0 8px}
+.bar{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:12px}
+button,.btn{font:600 .95rem "Helvetica Neue",Helvetica,Arial,"Baloo Da 2",sans-serif;border:2px solid var(--green);background:#fff;color:var(--green);padding:6px 16px;border-radius:10px;cursor:pointer;text-decoration:none;display:inline-block}
+button:hover,.btn:hover,button:focus-visible,.btn:focus-visible{border-color:var(--gold);color:var(--gold);outline:none}
+button[aria-pressed=true]{background:var(--green);color:#fff}
+button[aria-pressed=true]:hover{border-color:var(--gold);background:var(--green);color:var(--gold)}
+.btn.off{border-color:var(--delicate);color:var(--exile);cursor:default;background:#fff}
+.btn.off:hover{border-color:var(--delicate);color:var(--exile)}
+.legend{max-width:90ch;margin:14px auto 24px;font-size:.9rem;text-align:center}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;padding-bottom:60px}
+ol{list-style:none;margin:0;padding:0}
+li{display:grid;grid-template-columns:2.2rem 1fr;gap:4px 8px;padding:14px 0;border-bottom:1px solid var(--delicate)}
+.n{font-weight:700;color:var(--green)}
+.obj{font-weight:600}
+.meta{grid-column:2;font-size:.9rem}
+.meta a{color:var(--green)}
+.meta a:hover{color:var(--gold)}
+.tag{display:inline-block;font-size:.8rem;background:var(--delicate);color:var(--ink);border-radius:6px;padding:0 8px;margin-right:6px}
+li.review{border:2px dashed var(--gold);border-radius:10px;padding:12px;margin:10px 0}
+.row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px}
+.card{border:1px solid var(--delicate);border-radius:12px;padding:12px 16px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.card small{display:block}
+.err{padding:20px;border:2px solid var(--red);border-radius:10px}

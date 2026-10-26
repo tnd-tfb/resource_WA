@@ -1,0 +1,71 @@
+{
+  "title": "Student Curriculum",
+  "reviewText": "Revise lessons so far and celebrate the weekly progress check",
+  "grades": [
+    {
+      "name": "Grade 3",
+      "subjects": [
+        {
+          "name": "বাংলা",
+          "batches": [
+            { "lessons": [
+              { "objective": "9.1.1 বাক্য ও শব্দে ব্যবহৃত যুক্তবর্ণের ধ্বনি শনাক্ত করে পড়তে পারবে।", "resource": "Rain, Rain_বাংলা_.pdf", "chapter": "মুক্তিযুদ্ধে রাজারবাগ", "page": "৯২" },
+              { "objective": "9.1.4 যুক্তবর্ণ যোগে গঠিত শব্দ ব্যবহৃত বাক্য পড়তে পারবে।", "resource": "Rain, Rain_বাংলা_.pdf", "chapter": "মুক্তিযুদ্ধে রাজারবাগ", "page": "৯২" },
+              { "objective": "9.2.3 স্পষ্টস্বরে শুদ্ধ ও প্রমিত উচ্চারণে ও সাবলীলভাবে বিভিন্ন বাক্য ও সহজ অনুচ্ছেদ পড়ে বুঝতে পারবে।", "resource": "Rain, Rain_বাংলা_.pdf", "chapter": "মুক্তিযুদ্ধে রাজারবাগ", "page": "৯৩" }
+            ] },
+            { "lessons": [
+              { "objective": "9.2.1 বিরামচিহ্ন মেনে বিভিন্ন ধরনের বাক্য স্পষ্ট ও শুদ্ধ উচ্চারণে পড়তে পারবে।", "resource": "আমাদের গ্রাম", "chapter": "নিজের মতো লিখি", "page": "৯৫" },
+              { "objective": "12.1.2 স্পষ্ট স্বরে ও প্রমিত উচ্চারণে পাঠের ও সমমানের কবিতা পড়ে আনন্দের সাথে বিষয়বস্তু নিজের মতো করে বলতে পারবে।", "resource": "আমাদের গ্রাম", "chapter": "নিজের মতো লিখি", "page": "৯৫" },
+              { "objective": "16.2.2 রূপকথা, গল্প ও কবিতা সম্পর্কিত প্রশ্নের উত্তর লিখতে পারবে।", "resource": "আমাদের গ্রাম", "chapter": "নিজের মতো লিখি", "page": "৯৫" }
+            ] },
+            { "review": "Publish their work and celebrate the weekly progress check", "lessons": [
+              { "objective": "নিজের ভাব প্রকাশের পরিকল্পনা লিখে প্রকাশ করতে পারবে।", "chapter": "প্রতিযোগিতায় নাম লিখি", "page": "৯৭" },
+              { "objective": "নিজের ভাব সৃজনশীলভাবে প্রকাশের জন্য খসড়া তৈরি করতে পারবে।", "chapter": "প্রতিযোগিতায় নাম লিখি", "page": "৯৭" },
+              { "objective": "নিজের লেখা খসড়ার মূল্যায়ন করতে পারবে। (ব্যাকরণগত)", "chapter": "প্রতিযোগিতায় নাম লিখি", "page": "৯৭" }
+            ] }
+          ]
+        },
+        {
+          "name": "English",
+          "batches": [
+            { "lessons": [
+              { "objective": "4.2.2 Read aloud simple sentences with proper punctuation: comma and exclamation marks", "resource": "Alates’s Mission.pdf", "chapter": "Unit 7 Lesson 3", "page": "104" },
+              { "objective": "5.1.1 Express the meaning of familiar words in simple texts", "resource": "Alates’s Mission.pdf", "chapter": "Unit 7 Lesson 3", "page": "104" },
+              { "objective": "5.1.2 Get the specific information from simple texts", "resource": "Alates’s Mission.pdf", "chapter": "Unit 7 Lesson 3", "page": "104" }
+            ] },
+            { "lessons": [
+              { "objective": "6.1.1 Read rhymes and poems and respond with joy", "chapter": "Unit 7 Lesson 4", "page": "107" },
+              { "objective": "6.1.2 Comprehend the subject matter of rhymes and poems following reading", "chapter": "Unit 7 Lesson 4", "page": "107" },
+              { "objective": "9.1.1 Use capitalisation in names of persons, places, days of the week", "chapter": "Unit 7 Lesson 4", "page": "107" }
+            ] },
+            { "review": "Publish their work and celebrate the weekly progress check", "lessons": [
+              { "objective": "SWBAT ideate the thoughts.", "chapter": "Unit 8 Lesson 8", "page": "116-118" },
+              { "objective": "SWBAT draft their thoughts.", "chapter": "Unit 8 Lesson 8", "page": "118-119" },
+              { "objective": "SWBAT edit and revise the draft.", "chapter": "Unit 8 Lesson 8" }
+            ] }
+          ]
+        },
+        {
+          "name": "গণিত",
+          "batches": [
+            { "lessons": [
+              { "objective": "৭.১.৪ মিটার ও সেন্টিমিটারকে সেন্টিমিটারে প্রকাশ করতে পারবে।", "chapter": "অধ্যায় ১১, পরিমাপ", "type": "Foundational" },
+              { "objective": "৭.৪.২ সময় পরিমাপ-সম্পর্কিত বিভিন্ন সমস্যা সমাধান করতে পারবে।", "chapter": "অধ্যায় ১১, পরিমাপ", "type": "Intermediate" },
+              { "objective": "৭.৪.৩ দৈনন্দিন জীবনে সময়ের সঠিক ব্যবহার করতে পারবে।", "chapter": "অধ্যায় ১১, পরিমাপ", "type": "Authentic" }
+            ] },
+            { "lessons": [
+              { "objective": "৬.১.১ বাস্তব বিভিন্ন বস্তু ব্যবহার করে তল, রেখা ও বিন্দু শনাক্ত করতে পারবে।", "chapter": "অধ্যায় ১২, জ্যামিতি", "type": "Foundational" },
+              { "objective": "৬.১.৪ সমকোণ, সূক্ষ্মকোণ, স্থুলকোণ ও সরলকোণ সম্পর্কে ধারণা লাভ করে ব্যক্ত করতে পারবে।", "chapter": "অধ্যায় ১২, জ্যামিতি", "type": "Intermediate" },
+              { "objective": "৬.১.৬ বিভিন্ন ধরনের কোণ উৎসাহের সঙ্গে আঁকতে পারবে।", "chapter": "অধ্যায় ১২, জ্যামিতি", "type": "Authentic" }
+            ] },
+            { "lessons": [
+              { "objective": "৬.৩.১ পরিবেশ থেকে চতুর্ভুজ সম্পর্কে ধারণা পেয়ে তা শনাক্ত করতে পারবে।", "chapter": "অধ্যায় ১২, জ্যামিতি", "type": "Foundational" },
+              { "objective": "৬.৩.২ চতুর্ভুজ আঁকতে পারবে।", "chapter": "অধ্যায় ১২, জ্যামিতি", "type": "Intermediate" },
+              { "objective": "৬.৬.১ পরিবেশের বিভিন্ন বস্তুর ও জ্যামিতিক আকৃতির প্যাটার্ন উৎসাহের সঙ্গে অনুসন্ধান করতে পারবে।", "chapter": "অধ্যায় ১২, জ্যামিতি", "type": "Authentic" }
+            ] }
+          ]
+        }
+      ]
+    }
+  ]
+}

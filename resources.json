@@ -1,0 +1,129 @@
+{
+ "books": [
+  {
+   "grade": "Grade 3",
+   "subject": "Bangla",
+   "url": ""
+  },
+  {
+   "grade": "Grade 3",
+   "subject": "English",
+   "url": ""
+  },
+  {
+   "grade": "Grade 3",
+   "subject": "Maths",
+   "url": ""
+  },
+  {
+   "grade": "Grade 4",
+   "subject": "Bangla",
+   "url": ""
+  },
+  {
+   "grade": "Grade 4",
+   "subject": "English",
+   "url": ""
+  },
+  {
+   "grade": "Grade 4",
+   "subject": "Maths",
+   "url": ""
+  },
+  {
+   "grade": "Grade 5",
+   "subject": "Bangla",
+   "url": ""
+  },
+  {
+   "grade": "Grade 5",
+   "subject": "English",
+   "url": ""
+  },
+  {
+   "grade": "Grade 5",
+   "subject": "Maths",
+   "url": ""
+  },
+  {
+   "grade": "Grade 6",
+   "subject": "Bangla",
+   "url": ""
+  },
+  {
+   "grade": "Grade 6",
+   "subject": "English",
+   "url": ""
+  },
+  {
+   "grade": "Grade 6",
+   "subject": "Maths",
+   "url": ""
+  },
+  {
+   "grade": "Grade 7",
+   "subject": "Bangla",
+   "url": ""
+  },
+  {
+   "grade": "Grade 7",
+   "subject": "English",
+   "url": ""
+  },
+  {
+   "grade": "Grade 7",
+   "subject": "Maths",
+   "url": ""
+  },
+  {
+   "grade": "Grade 8",
+   "subject": "Bangla",
+   "url": ""
+  },
+  {
+   "grade": "Grade 8",
+   "subject": "English",
+   "url": ""
+  },
+  {
+   "grade": "Grade 8",
+   "subject": "Maths",
+   "url": ""
+  }
+ ],
+ "reading": [
+  {
+   "title": "Let's Read Asia (library)",
+   "language": "English",
+   "grade": "All grades",
+   "url": "https://www.letsreadasia.org/",
+   "file": ""
+  },
+  {
+   "title": "Rain, Rain (Bangla)",
+   "language": "Bangla",
+   "grade": "Grade 3",
+   "url": "",
+   "file": "Rain, Rain_বাংলা_.pdf"
+  },
+  {
+   "title": "Alates’s Mission",
+   "language": "English",
+   "grade": "Grade 3",
+   "url": "",
+   "file": "Alates’s Mission.pdf"
+  }
+ ],
+ "curriculum": [
+  {
+   "level": "Primary (Grades 3–5)",
+   "title": "Primary curriculum",
+   "url": ""
+  },
+  {
+   "level": "Secondary (Grades 6–8)",
+   "title": "Secondary curriculum",
+   "url": ""
+  }
+ ]
+}

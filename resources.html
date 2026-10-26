@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resources</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400&family=Montserrat:wght@600;700&family=Noto+Sans+Bengali:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <nav aria-label="Main"><a href="index.html">Curriculum</a><a href="resources.html" aria-current="page">Resources</a></nav>
+    <img class="logo" src="logo.png" alt="Teach For Bangladesh" onerror="this.remove()">
+  </div>
+  <h1>Resources</h1>
+  <p class="sub">NCTB books, reading resources and the curriculum documents for each grade.</p>
+  <div class="cols" id="cols"></div>
+</div>
+<script>
+const el = (t, c, x) => { const e = document.createElement(t); if (c) e.className = c; if (x) e.textContent = x; return e; };
+function open(label, url) {
+  if (!url) { const s = el("span", "btn off", label + " (coming soon)"); return s; }
+  const a = el("a", "btn", label); a.href = url; a.target = "_blank"; a.rel = "noopener"; return a;
+}
+function group(list, key) { const m = new Map(); list.forEach(x => { const k = x[key] || "Other"; if (!m.has(k)) m.set(k, []); m.get(k).push(x); }); return m; }
+
+fetch("resources.json").then(r => r.json()).then(d => {
+  const cols = document.getElementById("cols");
+
+  const books = el("section"); books.append(el("h2", "", "NCTB books"));
+  group(d.books || [], "grade").forEach((items, grade) => {
+    books.append(el("h3", "", grade));
+    const row = el("div", "row"); items.forEach(i => row.append(open(i.subject, i.url))); books.append(row);
+  });
+
+  const reading = el("section"); reading.append(el("h2", "", "Reading resources"));
+  group(d.reading || [], "language").forEach((items, lang) => {
+    reading.append(el("h3", "", lang));
+    items.forEach(i => { const c = el("div", "card"), t = el("div"); t.append(el("strong", "", i.title)); if (i.grade) t.append(el("small", "", i.grade)); c.append(t, open("Open", i.url)); reading.append(c); });
+  });
+
+  const cur = el("section"); cur.append(el("h2", "", "Curriculum"));
+  group(d.curriculum || [], "level").forEach((items, level) => {
+    cur.append(el("h3", "", level));
+    const row = el("div", "row"); items.forEach(i => row.append(open(i.title, i.url))); cur.append(row);
+  });
+
+  cols.append(books, reading, cur);
+}).catch(e => document.getElementById("cols").append(el("div", "err", "Could not load resources.json (" + e.message + ").")));
+</script>
+</body>
+</html>
